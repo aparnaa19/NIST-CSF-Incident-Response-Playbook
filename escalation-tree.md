@@ -60,11 +60,11 @@ ALERT RECEIVED
 
 ## Escalation Rules
 
-1. **Never delay escalation** waiting for full investigation — escalate based on available evidence.
-2. **Communicate verbally first** for S1/S2 — do not rely on email alone.
-3. **Document every escalation** — who was notified, when, and what information was shared.
-4. **Downgrade is allowed** — if investigation reveals lower severity, document the reason and inform all notified parties.
-5. **Re-escalate if needed** — if new evidence raises severity during investigation, escalate again immediately.
+1. **Never delay escalation** waiting for full investigation - escalate based on available evidence.
+2. **Communicate verbally first** for S1/S2 - do not rely on email alone.
+3. **Document every escalation** - who was notified, when, and what information was shared.
+4. **Downgrade is allowed** - if investigation reveals lower severity, document the reason and inform all notified parties.
+5. **Re-escalate if needed** - if new evidence raises severity during investigation, escalate again immediately.
 
 ---
 
