@@ -1,13 +1,13 @@
-# Playbook 3 — Insider Threat
+# Playbook 3 - Insider Threat
 
 ## What is an Insider Threat?
 
-An insider threat is a security risk that originates from within the organization — typically a current or former employee, contractor, or business partner who misuses their authorized access to harm the organization, whether intentionally or unintentionally.
+An insider threat is a security risk that originates from within the organization - typically a current or former employee, contractor, or business partner who misuses their authorized access to harm the organization, whether intentionally or unintentionally.
 
 **Common variants:**
-- Malicious insider — deliberate data theft, sabotage, or fraud
-- Negligent insider — accidental data exposure, policy violations, falling for phishing
-- Compromised insider — legitimate account taken over by an external attacker
+- Malicious insider - deliberate data theft, sabotage, or fraud
+- Negligent insider - accidental data exposure, policy violations, falling for phishing
+- Compromised insider - legitimate account taken over by an external attacker
 
 ---
 
@@ -17,7 +17,7 @@ An insider threat is a security risk that originates from within the organizatio
 |-----------------|--------|
 | DLP (Data Loss Prevention) tool | Bulk download or upload of sensitive files |
 | SIEM alert | Access to resources outside normal working hours or unusual locations |
-| User Behavior Analytics (UBA) | Deviation from baseline behavior — sudden spike in file access |
+| User Behavior Analytics (UBA) | Deviation from baseline behavior - sudden spike in file access |
 | HR / Manager report | Employee displaying behavioral red flags (resignation, grievance, financial stress) |
 | Email gateway | Sensitive documents emailed to personal email address |
 | Audit logs | Access to data outside the user's role or department |
@@ -50,7 +50,7 @@ Refer to [Severity Classification Table](severity-table.md) for SLAs and notific
 
 - [ ] Identify the user account involved and their role in the organization
 - [ ] Determine what data, systems, or assets were accessed or potentially compromised
-- [ ] Review the user's access permissions — do they legitimately have access to what they accessed?
+- [ ] Review the user's access permissions - do they legitimately have access to what they accessed?
 - [ ] Establish a baseline of the user's normal behavior from historical logs
 - [ ] Identify whether the user is currently employed or recently departed
 - [ ] Determine if this is a malicious, negligent, or compromised insider scenario
@@ -66,7 +66,7 @@ Refer to [Severity Classification Table](severity-table.md) for SLAs and notific
 ### 🟢 PROTECT
 > Minimize further data exposure without alerting the subject prematurely.
 
-- [ ] Do NOT lock or disable the account immediately — this alerts the insider (consult HR/Legal first)
+- [ ] Do NOT lock or disable the account immediately - this alerts the insider (consult HR/Legal first)
 - [ ] Silently increase logging and monitoring on the account
 - [ ] Implement a DLP rule to block further data transfers from this user if not already in place
 - [ ] Revoke any elevated privileges that are not essential to the user's current work
@@ -82,8 +82,8 @@ Refer to [Severity Classification Table](severity-table.md) for SLAs and notific
 - [ ] Pull all access logs for the user for the past 30–90 days
 - [ ] Review DLP logs for file transfers, USB activity, email attachments, and cloud uploads
 - [ ] Check email logs for forwarding to personal addresses or unusual recipients
-- [ ] Review authentication logs — after-hours access, access from home or unusual locations
-- [ ] Search SIEM for all systems the user has touched — map access timeline
+- [ ] Review authentication logs - after-hours access, access from home or unusual locations
+- [ ] Search SIEM for all systems the user has touched - map access timeline
 - [ ] Check for use of personal cloud storage tools (Dropbox, Google Drive) from corporate devices
 - [ ] Review printer logs and USB device connection logs
 - [ ] Identify if any colleagues' credentials were used by or shared with the subject
@@ -100,18 +100,18 @@ Refer to [Severity Classification Table](severity-table.md) for SLAs and notific
 > Contain the threat while preserving evidence and following legal process.
 
 - [ ] Escalate to SOC Manager, CISO, HR, and Legal per [Escalation Decision Tree](escalation-tree.md)
-- [ ] Preserve all digital evidence — do not alter logs, do not wipe systems
+- [ ] Preserve all digital evidence - do not alter logs, do not wipe systems
 - [ ] Work with Legal to understand data breach notification obligations
 - [ ] Work with HR on the formal employee investigation process
-- [ ] Once HR/Legal approve — disable user account, revoke all access (including VPN, SSO, SaaS apps)
-- [ ] Recover or identify any data that was exfiltrated — determine if it is recoverable
-- [ ] If sabotage detected — isolate affected systems, assess damage, initiate system recovery
+- [ ] Once HR/Legal approve - disable user account, revoke all access (including VPN, SSO, SaaS apps)
+- [ ] Recover or identify any data that was exfiltrated - determine if it is recoverable
+- [ ] If sabotage detected - isolate affected systems, assess damage, initiate system recovery
 - [ ] Coordinate with Law Enforcement if criminal activity is confirmed (e.g. IP theft, fraud)
 
 **Containment decision:**
 - Negligent insider → educate, remediate data exposure, policy enforcement
 - Malicious insider → full account lockout (HR/Legal approved), legal proceedings
-- Compromised insider → treat as external breach — isolate account, investigate attacker
+- Compromised insider → treat as external breach - isolate account, investigate attacker
 
 ---
 
@@ -121,8 +121,8 @@ Refer to [Severity Classification Table](severity-table.md) for SLAs and notific
 - [ ] Revoke all access for the former insider across all systems and third-party apps
 - [ ] Audit all systems and data the insider had access to for tampering or backdoors
 - [ ] Recover or contain any exfiltrated data (legal hold, notification to affected parties)
-- [ ] Review and update access control policies — enforce least privilege
-- [ ] Review offboarding procedures — were they followed correctly?
+- [ ] Review and update access control policies - enforce least privilege
+- [ ] Review offboarding procedures - were they followed correctly?
 - [ ] Conduct access review for all high-risk users (those with elevated privileges)
 - [ ] Update DLP and UBA rules based on techniques used in this incident
 - [ ] Provide findings to HR and Legal for any disciplinary or legal action
