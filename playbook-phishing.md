@@ -1,13 +1,13 @@
-# Playbook 1 — Phishing Attack
+# Playbook 1 - Phishing Attack
 
 ## What is a Phishing Attack?
 
 A phishing attack is a social engineering attempt where an attacker sends a fraudulent email (or message) disguised as a legitimate source to trick a user into revealing credentials, clicking a malicious link, or downloading malware.
 
 **Common variants:**
-- Spear phishing — targeted at a specific individual
-- Whaling — targeted at executives
-- Smishing — phishing via SMS
+- Spear phishing - targeted at a specific individual
+- Whaling - targeted at executives
+- Smishing - phishing via SMS
 
 ---
 
@@ -40,7 +40,7 @@ Refer to [Severity Classification Table](severity-table.md) for SLAs and notific
 ## NIST CSF Response Steps
 
 ### 🔵 IDENTIFY
-> Understand the scope — who and what is affected.
+> Understand the scope - who and what is affected.
 
 - [ ] Identify the affected user(s) who received or clicked the phishing email
 - [ ] Retrieve the original phishing email (headers, sender, links, attachments)
@@ -62,8 +62,8 @@ Refer to [Severity Classification Table](severity-table.md) for SLAs and notific
 - [ ] Block the phishing sender domain and IP at the email gateway
 - [ ] Add the malicious URL to the web proxy blocklist
 - [ ] Remove the phishing email from all inboxes (quarantine/delete)
-- [ ] If credentials were entered — force password reset immediately
-- [ ] If credentials were entered — revoke all active sessions for affected account
+- [ ] If credentials were entered - force password reset immediately
+- [ ] If credentials were entered - revoke all active sessions for affected account
 - [ ] Enable or confirm MFA is active on affected account
 - [ ] Notify all users who received the email with a warning not to click
 
@@ -74,7 +74,7 @@ Refer to [Severity Classification Table](severity-table.md) for SLAs and notific
 
 - [ ] Search email logs for all recipients of the phishing campaign
 - [ ] Check web proxy/firewall logs for connections to the phishing domain
-- [ ] Review authentication logs for the affected user — look for logins from unusual IPs or locations
+- [ ] Review authentication logs for the affected user - look for logins from unusual IPs or locations
 - [ ] Check for any email forwarding rules added to the compromised account
 - [ ] Check for any new inbox rules (attackers often create auto-delete or forward rules)
 - [ ] Search endpoint logs for any downloaded malware or script execution
@@ -95,7 +95,7 @@ Refer to [Severity Classification Table](severity-table.md) for SLAs and notific
 - [ ] Lock the compromised account if credential misuse is confirmed
 - [ ] Escalate to Tier 2 / SOC Manager per [Escalation Decision Tree](escalation-tree.md)
 - [ ] Notify HR and Legal if sensitive data was accessed
-- [ ] Preserve evidence — export logs, email headers, proxy records before any remediation
+- [ ] Preserve evidence - export logs, email headers, proxy records before any remediation
 - [ ] Submit phishing URL and email to threat intelligence platform (e.g. VirusTotal, PhishTank)
 - [ ] Report phishing domain for takedown (ICANN, hosting provider abuse contact)
 - [ ] Interview the affected user to understand exactly what actions were taken
@@ -126,11 +126,11 @@ Refer to [Severity Classification Table](severity-table.md) for SLAs and notific
 After incident closure, review the following:
 
 - [ ] How did the phishing email bypass existing controls?
-- [ ] Was the email flagged by any existing tool — if not, why not?
+- [ ] Was the email flagged by any existing tool - if not, why not?
 - [ ] How quickly did the user report the email?
 - [ ] Should email gateway rules be updated?
 - [ ] Should phishing simulation training be scheduled?
-- [ ] Were all playbook steps followed — any gaps?
+- [ ] Were all playbook steps followed - any gaps?
 - [ ] Update this playbook if any steps were missing or unclear
 
 ---
