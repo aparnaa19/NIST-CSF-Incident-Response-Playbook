@@ -40,7 +40,7 @@ nist-csf-incident-response-playbook/
 
 ---
 
-## NIST CSF Framework — Quick Reference
+## NIST CSF Framework - Quick Reference
 
 | Function | Purpose |
 |----------|---------|
@@ -56,10 +56,10 @@ nist-csf-incident-response-playbook/
 
 | Level | SLA | Description |
 |-------|-----|-------------|
-| S4 — Low | 72 hrs | Minimal impact, likely false positive |
-| S3 — Medium | 24 hrs | Isolated to one user/system, unconfirmed breach |
-| S2 — High | 4 hrs | Active confirmed threat, multiple systems affected |
-| S1 — Critical | 1 hr | Business disruption, data exfiltration likely |
+| S4 - Low | 72 hrs | Minimal impact, likely false positive |
+| S3 - Medium | 24 hrs | Isolated to one user/system, unconfirmed breach |
+| S2 - High | 4 hrs | Active confirmed threat, multiple systems affected |
+| S1 - Critical | 1 hr | Business disruption, data exfiltration likely |
 
 Full table → [severity-table.md](playbook/severity-table.md)
 
@@ -80,4 +80,4 @@ Full table → [severity-table.md](playbook/severity-table.md)
 
 - [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
 - [CISA Incident Response Playbooks](https://www.cisa.gov/sites/default/files/publications/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf)
-- [NIST SP 800-61 Rev. 2 — Computer Security Incident Handling Guide](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final)
+- [NIST SP 800-61 Rev. 2 - Computer Security Incident Handling Guide](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final)
