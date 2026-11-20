@@ -1,14 +1,14 @@
-# Playbook 2 — Brute Force Attack
+# Playbook 2 - Brute Force Attack
 
 ## What is a Brute Force Attack?
 
 A brute force attack is an attempt to gain unauthorized access to a system by systematically trying a large number of username and password combinations until the correct one is found.
 
 **Common variants:**
-- Classic brute force — trying all possible combinations
-- Dictionary attack — using a wordlist of common passwords
-- Credential stuffing — using previously leaked username/password pairs from data breaches
-- Password spraying — trying one common password across many accounts (avoids lockouts)
+- Classic brute force - trying all possible combinations
+- Dictionary attack - using a wordlist of common passwords
+- Credential stuffing - using previously leaked username/password pairs from data breaches
+- Password spraying - trying one common password across many accounts (avoids lockouts)
 
 ---
 
@@ -43,7 +43,7 @@ Refer to [Severity Classification Table](severity-table.md) for SLAs and notific
 ## NIST CSF Response Steps
 
 ### 🔵 IDENTIFY
-> Understand the scope — who and what is being targeted.
+> Understand the scope - who and what is being targeted.
 
 - [ ] Identify the targeted account(s) and system(s)
 - [ ] Determine the source IP address(es) of the attack
@@ -64,10 +64,10 @@ Refer to [Severity Classification Table](severity-table.md) for SLAs and notific
 > Limit the attacker's ability to continue or escalate.
 
 - [ ] Block the source IP at the firewall immediately
-- [ ] If attack is distributed (many IPs) — consider geo-blocking or rate limiting
+- [ ] If attack is distributed (many IPs) - consider geo-blocking or rate limiting
 - [ ] Lock the targeted account(s) if not already auto-locked
 - [ ] Force password reset on targeted account(s) as a precaution
-- [ ] Verify MFA is enabled on all targeted accounts — if not, enforce immediately
+- [ ] Verify MFA is enabled on all targeted accounts - if not, enforce immediately
 - [ ] Ensure account lockout policy is active (e.g., lock after 5 failed attempts)
 - [ ] Temporarily disable externally exposed login pages if attack is ongoing
 
@@ -78,7 +78,7 @@ Refer to [Severity Classification Table](severity-table.md) for SLAs and notific
 
 - [ ] Review authentication logs for successful logins from the attacking IP or unusual locations
 - [ ] Check for logins occurring after the brute force attempts (possible successful guess)
-- [ ] Search SIEM for the attacking IP across all log sources — not just the targeted system
+- [ ] Search SIEM for the attacking IP across all log sources - not just the targeted system
 - [ ] Look for lateral movement: did the attacker access other systems after successful login?
 - [ ] Check for privilege escalation attempts post-login
 - [ ] Review VPN and remote access logs for the targeted account
@@ -95,11 +95,11 @@ Refer to [Severity Classification Table](severity-table.md) for SLAs and notific
 ### 🔴 RESPOND
 > Contain the threat and eradicate unauthorized access.
 
-- [ ] If login was successful — immediately revoke all active sessions for the compromised account
+- [ ] If login was successful - immediately revoke all active sessions for the compromised account
 - [ ] Lock the compromised account pending investigation
 - [ ] Escalate per [Escalation Decision Tree](escalation-tree.md) if login was confirmed successful
 - [ ] Preserve authentication logs and SIEM data before any changes
-- [ ] If lateral movement detected — isolate affected systems immediately
+- [ ] If lateral movement detected - isolate affected systems immediately
 - [ ] Notify the account owner to confirm whether they initiated any of the login attempts
 - [ ] Report attacking IP to threat intelligence platform (e.g. AbuseIPDB)
 - [ ] Review whether password policy meets minimum complexity requirements
@@ -130,9 +130,9 @@ Refer to [Severity Classification Table](severity-table.md) for SLAs and notific
 After incident closure, review the following:
 
 - [ ] How long did the attack run before detection? Is the SIEM alert threshold appropriate?
-- [ ] Was the lockout policy effective — did it trigger correctly?
+- [ ] Was the lockout policy effective - did it trigger correctly?
 - [ ] Was MFA in place on the targeted account? If not, why not?
-- [ ] Was the attacking IP from a known malicious source — was it already in a blocklist?
+- [ ] Was the attacking IP from a known malicious source - was it already in a blocklist?
 - [ ] Did credential stuffing succeed because of a password reuse issue?
 - [ ] Should the detection threshold be adjusted?
 - [ ] Update this playbook if any steps were missing or unclear
